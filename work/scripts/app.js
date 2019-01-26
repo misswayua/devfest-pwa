@@ -269,7 +269,7 @@
    */
   var initialWeatherForecast = {
     key: '2459115',
-    label: 'New York, NY',
+    label: 'Kisumu',
     created: '2016-07-22T01:00:00Z',
     channel: {
       astronomy: {

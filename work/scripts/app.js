@@ -163,7 +163,7 @@
    */
   app.getForecast = function(key, label) {
     //var statement = 'select * from weather.forecast where woeid=' + key;
-    var url = 'https://slack-redir.net/link?url=https%3A%2F%2Fcd212ca7.ngrok.io%2Fapi%2Ftemperature'
+    var url = 'https://cd212ca7.ngrok.io/api/temperature'
     // TODO add cache logic here
 
     // Fetch the latest data.

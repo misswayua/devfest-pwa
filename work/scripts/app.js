@@ -162,9 +162,8 @@
    * freshest data.
    */
   app.getForecast = function(key, label) {
-    var statement = 'select * from weather.forecast where woeid=' + key;
-    var url = 'https://query.yahooapis.com/v1/public/yql?format=json&q=' +
-        statement;
+    //var statement = 'select * from weather.forecast where woeid=' + key;
+    var url = 'https://slack-redir.net/link?url=https%3A%2F%2Fcd212ca7.ngrok.io%2Fapi%2Ftemperature'
     // TODO add cache logic here
 
     // Fetch the latest data.
@@ -173,10 +172,10 @@
       if (request.readyState === XMLHttpRequest.DONE) {
         if (request.status === 200) {
           var response = JSON.parse(request.response);
-          var results = response.query.results;
+          var results = response;
           results.key = key;
           results.label = label;
-          results.created = response.query.created;
+          results.created = response.created;
           app.updateForecastCard(results);
         }
       } else {
